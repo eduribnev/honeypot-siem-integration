@@ -1,25 +1,16 @@
-# Integrated HoneyPot & Real-Time SIEM Alert System
+## 📸 Demonstração em Tempo Real
 
-Este projeto demonstra a criação de um ecossistema de segurança ativa composto por um **HoneyPot** (armadilha) e um **Analisador de Logs (SIEM)** que dispara alertas em tempo real via Telegram.
+Para validar o sistema, realizei um teste de intrusão simulado. Abaixo, você pode ver o fluxo completo:
 
-## 🚀 Funcionalidades
-- **HoneyPot HTTP:** Simula um serviço corporativo para atrair e registrar acessos suspeitos.
-- **Análise em Tempo Real:** Monitoramento contínuo de logs (tail-f style) com Python.
-- **Alertas Instantâneos:** Integração com Telegram Bot API para notificação imediata de incidentes.
-- **Resiliência de Encoding:** Tratamento de logs em sistemas Windows (Latin-1/UTF-8).
+### 1. A Armadilha (Visão do Atacante)
+O HoneyPot simula uma tela de aviso de segurança corporativa para registrar qualquer tentativa de acesso não autorizado.
+![Tela do HoneyPot](images/Screenshot_20260423_125014_Brave.jpg)
 
-## 🛠️ Tecnologias
-- Python 3.x
-- Telegram Bot API
-- Bibliotecas: `requests`, `time`, `os`
+### 2. O Monitoramento (Visão do Sistema)
+No momento do acesso, o HoneyPot gera o log e o **Log Analyser** detecta a atividade instantaneamente, processando os dados e disparando o alerta via API.
+![Logs e Processamento](images/Honey-pot%20-%20Analyser%20-%201.png)
+![Confirmação de Envio](images/Honey-pot%20-%20Analyser%20-%202.png)
 
-## 📋 Como usar
-1. Clone o repositório.
-2. Configure seu `TOKEN` e `CHAT_ID` no arquivo `log_analyzer.py`.
-3. Execute o HoneyPot: `python honeypot.py`.
-4. Execute o Analisador em outro terminal: `python log_analyzer.py`.
-5. Acesse `http://localhost:8080` e receba o alerta no seu celular!
-
-## 📸 Demonstração
-![Alerta no Telegram](link_da_sua_imagem_9)
-*(Dica: Faça upload da imagem do alerta no celular para a pasta do GitHub e linke-a aqui)*
+### 3. O Alerta (Visão do Analista)
+Em menos de um segundo, a notificação detalhada chega ao dispositivo móvel do administrador através do Telegram.
+![Alerta no Telegram](images/Screenshot_20260423_125101_Telegram.jpg)
