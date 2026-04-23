@@ -4,7 +4,7 @@ Para validar o sistema, realizei um teste de intrusão simulado. Abaixo, você p
 
 ### 1. A Armadilha (Visão do Atacante)
 O HoneyPot simula uma tela de aviso de segurança corporativa para registrar qualquer tentativa de acesso não autorizado.
-![Tela do HoneyPot](images/Screenshot_20260423_125014_Brave.jpg)
+![Tela do HoneyPot](images/Screenshot#2020260423%20125014%20Brave.jpg)
 
 ### 2. O Monitoramento (Visão do Sistema)
 No momento do acesso, o HoneyPot gera o log e o **Log Analyser** detecta a atividade instantaneamente, processando os dados e disparando o alerta via API.
